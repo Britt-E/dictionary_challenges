@@ -22,7 +22,7 @@ def grocery_calculator(groceries: dict):
     """
     pass
 
-def word_counter(word_list: list):
+def word_counter(word_list: list): # word_list ['apple', 'bannana']
     """A function to count the occurrences of each word in a word list.
 
     Arguments: 
@@ -35,7 +35,27 @@ def word_counter(word_list: list):
 
     Example output: {"apple": 3, "banana": 2, "cherry": 1}
     """
-    pass
+    
+    # create a dictionary
+    fruit_dictionary = {}
+    
+    # create a for loop. go through the list and count each element
+    # when you hear the word each usually means for loop
+    for fruit in word_list:
+        if fruit not in fruit_dictionary.keys():
+            fruit_dictionary[fruit] = 1
+        else:
+            fruit_dictionary[fruit] += 1 
+            # fruit_dictionary[fruit] = fruit_dictionary[fruit] + 1 python does maths on right side before assign value
+
+    return fruit_dictionary
+
+print(word_counter(["apple", "banana", "apple", "cherry", "apple", "banana"]))
+
+
+
+
+
 
 def create_colour_dict(file_path: str):
     """A function that accesses an indicated csv file of colour values and 
